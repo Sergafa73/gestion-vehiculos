@@ -7,7 +7,7 @@ const traducir = (msg = '') => {
   if (msg.includes('already registered')) return 'Ya existe una cuenta con ese correo. Prueba a iniciar sesión.';
   if (msg.includes('Email not confirmed')) return 'Confirma tu correo desde el mensaje que te hemos enviado.';
   if (msg.includes('at least')) return 'La contraseña debe tener al menos 8 caracteres.';
-  return 'No se ha podido completar la operación. Inténtalo de nuevo.';
+  return `No se ha podido completar la operación. Detalle técnico: ${msg || 'sin información'}`;
 };
 
 export default function Login() {
